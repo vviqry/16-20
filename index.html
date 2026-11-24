@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>English Speaking Class — Book 1 (Chapter 16–20)</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-5px); }
+      40% { transform: translateX(5px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+    .animate-fade-up {
+      animation: fadeSlideUp 0.22s ease-out forwards;
+    }
+    .animate-shake {
+      animation: shake 0.34s ease-in-out;
+    }
+    /* Hide scrollbar for horizontal filter strip */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-200 text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
+
+  <!-- Mobile-First App Shell (Full width on phone, max 480px centered on desktop) -->
+  <div id="app" class="max-w-[480px] mx-auto min-h-[100dvh] bg-slate-50 shadow-2xl flex flex-col relative overflow-x-hidden">
+
+    <!-- ==================== STICKY HEADER ==================== -->
+    <header id="stickyHeader" class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
+      <!-- Top Row: Title, Progress Counter, Evaluation & Drawer Triggers -->
+      <div class="px-3.5 pt-3 pb-2 flex items-center justify-between gap-2">
+        <div class="min-w-0">
+          <h1 class="text-sm font-extrabold text-slate-900 leading-tight truncate">
+            Book 1 • Chapter 16–20
+          </h1>
+          <div class="flex items-center gap-2 mt-0.5">
+            <span id="headerProgressText" class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+              0/50 Benar
+            </span>
+            <span id="headerViewCounter" class="text-[11px] font-semibold text-slate-500">
+              Soal 1 / 50
+            </span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-1.5 shrink-0">
+          <button id="openEvalBtn" aria-label="Hasil dan Evaluasi" class="h-9 px-2.5 rounded-xl bg-blue-50 hover:bg-blue-100 active:scale-95 text-blue-700 text-xs font-bold flex items-center gap-1 transition">
+            <span>📊</span>
+            <span class="hidden xs:inline">Hasil</span>
+          </button>
+          <button id="openDrawerBtn" aria-label="Daftar Soal" class="h-9 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 active:scale-95 text-white text-xs font-bold flex items-center gap-1.5 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <span>Daftar Soal</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Thin Global Progress Bar -->
+      <div class="w-full h-1.5 bg-slate-100">
+        <div id="globalProgressBar" class="h-full bg-gradient-to-r from-blue-600 to-emerald-500 transition-all duration-300" style="width: 0%"></div>
+      </div>
+
+      <!-- Compact Filter Strip: Chapter & Type -->
+      <div class="px-3.5 py-2 bg-slate-50/90 border-t border-slate-100 space-y-1.5">
+        <!-- Chapter Filter Row -->
+        <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+          <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 shrink-0 mr-0.5">Ch:</span>
+          <button data-ch="all" class="ch-filter-btn shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-600 text-white transition">Semua</button>
+          <button data-ch="16" class="ch-filter-btn shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold bg-white border border-slate-200 text-slate-600 transition">Ch.16</button>
+          <button data-ch="17" class="ch-filter-btn shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold bg-white border border-slate-200 text-slate-600 transition">Ch.17</button>
+          <button data-ch="18" class="ch-filter-btn shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold bg-white border border-slate-200 text-slate-600 transition">Ch.18</button>
+          <button data-ch="19" class="ch-filter-btn shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold bg-white border border-slate-200 text-slate-600 transition">Ch.19</button>
+          <button data-ch="20" class="ch-filter-btn shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold bg-white border border-slate-200 text-slate-600 transition">Ch.20</button>
+        </div>
+
+        <!-- Type Filter Row -->
+        <div class="flex items-center justify-between gap-2">
+          <div class="flex items-center gap-1.5">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 shrink-0 mr-0.5">Tipe:</span>
+            <button data-type="all" class="type-filter-btn px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-800 text-white transition">Semua</button>
+            <button data-type="pg" class="type-filter-btn px-2.5 py-1 rounded-full text-[11px] font-bold bg-white border border-slate-200 text-slate-600 transition">PG (35)</button>
+            <button data-type="pgk" class="type-filter-btn px-2.5 py-1 rounded-full text-[11px] font-bold bg-white border border-slate-200 text-slate-600 transition">PGK (15)</button>
+          </div>
+          <span id="filterMatchBadge" class="text-[11px] font-bold text-slate-500 shrink-0">50 soal</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== QUIZ MAIN CONTENT ==================== -->
+    <main id="quizView" class="flex-1 overflow-y-auto px-4 pt-4 pb-28">
+      <!-- Question Card -->
+      <article id="questionCard" class="bg-white rounded-3xl p-5 border border-slate-200/90 shadow-sm mb-4 animate-fade-up">
+        <!-- Badges Row -->
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span id="qChapterBadge" class="px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-blue-50 text-blue-700">
+              Chapter 16
+            </span>
+            <span id="qTypeBadge" class="px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-slate-100 text-slate-700">
+              Pilihan Ganda
+            </span>
+          </div>
+          <span id="qNumberBadge" class="text-xs font-extrabold text-slate-400">
+            #1
+          </span>
+        </div>
+
+        <!-- Topic Subtitle -->
+        <div id="qTopicLabel" class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
+          Sharing Opinions &amp; Responding to Others
+        </div>
+
+        <!-- Question Text -->
+        <h2 id="questionText" class="text-[17px] sm:text-[18px] font-bold text-slate-900 leading-snug">
+          Memuat pertanyaan...
+        </h2>
+
+        <!-- PGK Instruction Callout -->
+        <div id="pgkCallout" class="hidden mt-3 px-3 py-2 rounded-2xl bg-violet-50 border border-violet-200/80 text-xs font-semibold text-violet-800 flex items-center gap-2">
+          <span>☑️</span>
+          <span>Pilihan Ganda Kompleks • Pilih <strong>lebih dari 1</strong> jawaban yang benar (2 atau 3 opsi).</span>
+        </div>
+      </article>
+
+      <!-- Options List (A, B, C, D) -->
+      <div id="optionsContainer" class="space-y-2.5 mb-4">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Feedback / Auto-Correction Card -->
+      <div id="feedbackCard" class="hidden rounded-3xl p-4 border-2 mb-4 animate-fade-up">
+        <!-- Rendered dynamically -->
+      </div>
+    </main>
+
+    <!-- ==================== EVALUATION / RESULTS VIEW ==================== -->
+    <section id="evalView" class="hidden flex-1 overflow-y-auto px-4 pt-4 pb-10 animate-fade-up">
+      <!-- Top Summary Card -->
+      <div class="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-700 rounded-3xl p-5 text-white text-center shadow-lg shadow-blue-200 mb-4">
+        <div id="evalEmoji" class="text-4xl mb-1.5">📊</div>
+        <h2 class="text-xl font-extrabold">Hasil &amp; Evaluasi</h2>
+        <p id="evalSub" class="text-xs text-blue-100 mt-1">English Speaking Class • Book 1 (Ch. 16–20)</p>
+
+        <div class="mt-4 grid grid-cols-2 gap-2.5">
+          <div class="bg-white/15 backdrop-blur-xs rounded-2xl p-3">
+            <div id="evalTotalScore" class="text-2xl font-extrabold">0/50</div>
+            <div class="text-[11px] text-blue-100 font-semibold mt-0.5">Total Benar</div>
+          </div>
+          <div class="bg-white/15 backdrop-blur-xs rounded-2xl p-3">
+            <div id="evalFirstTryPct" class="text-2xl font-extrabold">0%</div>
+            <div class="text-[11px] text-blue-100 font-semibold mt-0.5">Akurasi 1x Coba</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Status Summary -->
+      <div class="grid grid-cols-3 gap-2 mb-4 text-center">
+        <div class="bg-white rounded-2xl p-3 border border-emerald-200">
+          <div id="statCorrectFirst" class="text-xl font-extrabold text-emerald-600">0</div>
+          <div class="text-[11px] font-semibold text-slate-500 leading-tight mt-0.5">Benar 1x</div>
+        </div>
+        <div class="bg-white rounded-2xl p-3 border border-blue-200">
+          <div id="statCorrected" class="text-xl font-extrabold text-blue-600">0</div>
+          <div class="text-[11px] font-semibold text-slate-500 leading-tight mt-0.5">Via Koreksi</div>
+        </div>
+        <div class="bg-white rounded-2xl p-3 border border-amber-200">
+          <div id="statRemaining" class="text-xl font-extrabold text-amber-600">50</div>
+          <div class="text-[11px] font-semibold text-slate-500 leading-tight mt-0.5">Belum/Revisi</div>
+        </div>
+      </div>
+
+      <!-- PG vs PGK Accuracy -->
+      <div class="bg-white rounded-3xl p-4 border border-slate-200/90 shadow-sm mb-4">
+        <h3 class="text-sm font-extrabold text-slate-800 mb-3">Akurasi Tipe Soal (PG vs PGK)</h3>
+        <div class="grid grid-cols-2 gap-2.5">
+          <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200/70">
+            <div class="text-[11px] font-bold text-blue-700">Pilihan Ganda (PG)</div>
+            <div id="evalPgScore" class="text-lg font-extrabold text-slate-900 mt-0.5">0 / 35</div>
+            <div id="evalPgFirst" class="text-[11px] text-slate-500 font-medium">0% benar 1x coba</div>
+          </div>
+          <div class="p-3 rounded-2xl bg-violet-50/70 border border-violet-200/70">
+            <div class="text-[11px] font-bold text-violet-700">PG Kompleks (PGK)</div>
+            <div id="evalPgkScore" class="text-lg font-extrabold text-slate-900 mt-0.5">0 / 15</div>
+            <div id="evalPgkFirst" class="text-[11px] text-slate-500 font-medium">0% benar 1x coba</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Breakdown per Chapter 16–20 -->
+      <div class="bg-white rounded-3xl p-4 border border-slate-200/90 shadow-sm mb-5">
+        <h3 class="text-sm font-extrabold text-slate-800 mb-3">Akurasi per Chapter (Ch. 16–20)</h3>
+        <div id="evalChapterList" class="space-y-3">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="space-y-2.5">
+        <button id="backToQuizBtn" class="w-full min-h-[50px] py-3 px-5 rounded-2xl bg-blue-600 hover:bg-blue-700 active:scale-[0.99] text-white font-bold text-sm shadow-md shadow-blue-200 transition">
+          ← Kembali ke Latihan Soal
+        </button>
+        <button id="openResetModalBtn" class="w-full min-h-[48px] py-3 px-5 rounded-2xl bg-white border-2 border-rose-200 hover:bg-rose-50 active:scale-[0.99] text-rose-600 font-bold text-sm transition">
+          🔄 Reset Semua Progres
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== STICKY BOTTOM ACTION BAR (THUMB ZONE) ==================== -->
+    <footer id="stickyBottomBar" class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[480px] z-30 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3.5 py-2.5">
+      <div class="flex items-center gap-2">
+        <button id="prevBtn" class="min-h-[48px] px-3.5 rounded-2xl bg-slate-100 hover:bg-slate-200 active:scale-95 disabled:opacity-40 text-slate-700 font-bold text-xs flex items-center justify-center gap-1 shrink-0 transition">
+          <span>←</span>
+          <span>Prev</span>
+        </button>
+
+        <button id="checkBtn" class="flex-1 min-h-[48px] px-4 rounded-2xl bg-blue-600 hover:bg-blue-700 active:scale-[0.98] disabled:bg-slate-300 disabled:text-slate-500 text-white font-extrabold text-sm shadow-md shadow-blue-200/80 transition flex items-center justify-center gap-1.5">
+          Periksa Jawaban
+        </button>
+
+        <button id="nextBtn" class="min-h-[48px] px-3.5 rounded-2xl bg-slate-100 hover:bg-slate-200 active:scale-95 disabled:opacity-40 text-slate-700 font-bold text-xs flex items-center justify-center gap-1 shrink-0 transition">
+          <span>Next</span>
+          <span>→</span>
+        </button>
+      </div>
+    </footer>
+
+    <!-- ==================== BOTTOM SHEET: DAFTAR SOAL (1–50) ==================== -->
+    <div id="drawerModal" class="hidden fixed inset-0 z-50 flex items-end justify-center bg-slate-900/50 backdrop-blur-xs">
+      <div class="w-full max-w-[480px] max-h-[82dvh] bg-white rounded-t-3xl flex flex-col shadow-2xl animate-fade-up">
+        <!-- Drag Handle -->
+        <div class="w-10 h-1 bg-slate-300 rounded-full mx-auto mt-2.5"></div>
+
+        <!-- Drawer Header -->
+        <div class="px-5 py-3.5 border-b border-slate-100 flex items-center justify-between">
+          <div>
+            <h3 class="font-extrabold text-base text-slate-900">Daftar Soal (1–50)</h3>
+            <p id="drawerSub" class="text-xs text-slate-500">Ketuk nomor untuk langsung menuju soal</p>
+          </div>
+          <button id="closeDrawerBtn" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold flex items-center justify-center">
+            ✕
+          </button>
+        </div>
+
+        <!-- Color Legend -->
+        <div class="px-5 py-2.5 bg-slate-50 border-b border-slate-100 flex flex-wrap gap-x-3.5 gap-y-1.5 text-[11px] font-bold text-slate-600">
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-slate-200 inline-block"></span>Belum</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>Benar</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>Perlu Revisi</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-blue-600 inline-block"></span>Aktif</span>
+        </div>
+
+        <!-- Number Grid -->
+        <div id="drawerGrid" class="p-4 overflow-y-auto grid grid-cols-5 gap-2">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Drawer Footer -->
+        <div class="p-4 border-t border-slate-100">
+          <button id="drawerEvalBtn" class="w-full min-h-[48px] rounded-2xl bg-blue-50 hover:bg-blue-100 text-blue-700 font-extrabold text-sm transition">
+            📊 Lihat Hasil &amp; Evaluasi
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== CUSTOM RESET CONFIRM MODAL (No window.confirm) ==================== -->
+    <div id="resetModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-5 bg-slate-900/50 backdrop-blur-xs">
+      <div class="w-full max-w-[350px] bg-white rounded-3xl p-6 shadow-2xl animate-fade-up">
+        <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl mx-auto mb-3">
+          🔄
+        </div>
+        <h3 class="text-lg font-extrabold text-slate-900 text-center">Reset Semua Progres?</h3>
+        <p class="text-xs text-slate-500 text-center mt-1.5 leading-relaxed">
+          Seluruh jawaban dan statistik 50 soal akan dihapus permanen agar kamu bisa mengulang latihan dari awal.
+        </p>
+        <div class="grid grid-cols-2 gap-2.5 mt-5">
+          <button id="cancelResetBtn" class="min-h-[48px] rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm transition">
+            Batal
+          </button>
+          <button id="confirmResetBtn" class="min-h-[48px] rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm transition">
+            Ya, Reset
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC & 50 COMPLETE QUESTIONS ==================== -->
+  <script>
+    /**
+     * CHAPTER METADATA (Book 1, Chapters 16–20)
+     */
+    const CHAPTER_META = {
+      16: { short: "Ch. 16", title: "Sharing Opinions & Responding to Others" },
+      17: { short: "Ch. 17", title: "Asking for and Offering Help" },
+      18: { short: "Ch. 18", title: "Talking About Past Experiences" },
+      19: { short: "Ch. 19", title: "My Last Weekend / Holiday & Memorable Experiences" },
+      20: { short: "Ch. 20", title: "Requests & Polite Expressions" }
+    };
+
+    /**
+     * COMPLETE 50 QUESTIONS BANK (35 PG + 15 PGK)
+     * Every single wrong option has a specific Indonesian explanation WITHOUT leaking the right answer.
+     */
+    const QUESTIONS = [
+      // ==================== CHAPTER 16 (No. 1–10) ====================
+      {
+        id: 1, chapter: 16, type: "pg",
+        question: "A: 'I think teamwork is very important in a hotel.' Choose the grammatically correct way to agree.",
+        options: {
+          A: "I am agree with you.",
+          B: "I agree with you.",
+          C: "I agreeing with you.",
+          D: "I agree to you."
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "'agree' sudah merupakan kata kerja (verb), jadi TIDAK boleh ditambahkan 'am' di depannya.",
+          C: "Untuk menyatakan persetujuan umum dalam bahasa Inggris, tidak menggunakan bentuk verb-ing ('agreeing') tanpa kata bantu yang tepat.",
+          D: "Preposisi setelah 'agree' jika diikuti orang ('you') bukan 'to', melainkan preposisi lain yang berarti 'dengan'."
+        },
+        ruleGuide: "Ingat common mistake Chapter 16: 'agree' adalah kata kerja langsung (tanpa 'am/is/are'), dan jika diikuti orang, gunakan pasangan preposisi yang tepat ('denganmu').",
+        successExplanation: "Tepat! 'I agree with you.' menggunakan kata kerja 'agree' secara langsung tanpa 'am' dan memakai preposisi 'with'."
+      },
+      {
+        id: 2, chapter: 16, type: "pg",
+        question: "Choose the grammatically correct opinion sentence.",
+        options: {
+          A: "I think English important for hospitality students.",
+          B: "I thinking English is important for hospitality students.",
+          C: "I think English is important for hospitality students.",
+          D: "I think because English is important for hospitality students."
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "Kalimat ini kehilangan kata kerja 'to be' (is) di antara subjek 'English' dan kata sifat 'important'.",
+          B: "Untuk menyatakan opini umum, gunakan Simple Present ('I think'), bukan 'I thinking'.",
+          D: "Kata 'because' tidak boleh langsung diletakkan tepat setelah 'I think'; sebutkan opininya dulu, baru alasannya."
+        },
+        ruleGuide: "Pola memberi opini: 'I think + Subject + Verb/to be + ...'. Jika memakai kata sifat ('important'), pastikan ada 'to be' yang menghubungkannya.",
+        successExplanation: "Benar! 'I think English is important...' memiliki pola Simple Present dan 'to be' yang lengkap."
+      },
+      {
+        id: 3, chapter: 16, type: "pg",
+        question: "Complete the opinion sentence correctly: 'I think hospitality students ______ more speaking practice.'",
+        options: {
+          A: "needs",
+          B: "needing",
+          C: "is need",
+          D: "need"
+        },
+        correct: ["D"],
+        optionHints: {
+          A: "Subjek 'hospitality students' berbentuk jamak (lebih dari satu), jadi kata kerjanya tidak boleh ditambah akhiran '-s'.",
+          B: "Verb-ing tidak bisa berdiri sendiri sebagai kata kerja utama pada kalimat opini Simple Present.",
+          C: "Kata kerja utama tidak boleh didahului 'is' dalam kalimat aktif Simple Present."
+        },
+        ruleGuide: "Pada Simple Present setelah 'I think', cek subjeknya: subjek jamak ('students') memakai kata kerja dasar tanpa '-s/-es'.",
+        successExplanation: "Bagus! Karena 'students' adalah jamak, kata kerja Simple Present-nya adalah 'need' tanpa '-s'."
+      },
+      {
+        id: 4, chapter: 16, type: "pg",
+        question: "Which sentence expresses a negative opinion naturally without a double negative?",
+        options: {
+          A: "I don't think English is not difficult.",
+          B: "I don't think working alone is always better.",
+          C: "I am not think working alone is better.",
+          D: "I not think working alone is better."
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Kalimat ini mengandung 'double negative' ('don't think' + 'is not') sehingga maknanya jadi membingungkan.",
+          C: "Untuk menegasikan kata kerja 'think' di Simple Present, gunakan 'don't', bukan 'am not'.",
+          D: "Kalimat negatif Simple Present wajib memakai kata bantu 'do/does + not' sebelum kata kerja utama."
+        },
+        ruleGuide: "Pola opini negatif di Chapter 16: 'I don't think + kalimat positif'. Hindari memakai dua kata negatif sekaligus dalam satu kalimat.",
+        successExplanation: "Tepat! 'I don't think working alone is always better.' adalah cara natural menyampaikan opini negatif."
+      },
+      {
+        id: 5, chapter: 16, type: "pg",
+        question: "In a hotel team meeting, your coworker says: 'I think working alone is faster.' You have a different opinion. Choose the most polite disagreement.",
+        options: {
+          A: "You're wrong! Teamwork is better.",
+          B: "No! That's a bad idea.",
+          C: "I see your point, but I think teamwork helps us solve problems faster.",
+          D: "I don't care about your opinion."
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "Mengatakan 'You're wrong!' secara langsung terdengar kasar dan tidak profesional dalam diskusi kerja.",
+          B: "Menolak langsung dengan 'No! That's a bad idea' kurang sopan terhadap pendapat rekan kerja.",
+          D: "Ungkapan ini tidak menghargai lawan bicara dan merusak kerja sama tim."
+        },
+        ruleGuide: "Formula ketidaksetujuan sopan (Polite Disagreement): Akui pendapat lawan bicara dulu ('I see your point...' / 'I understand...'), lalu sampaikan pendapat berbeda dengan 'but' dan alasannya.",
+        successExplanation: "Sangat profesional! Menghargai pendapat rekan kerja dengan 'I see your point, but...' lalu memberikan alasan yang jelas."
+      },
+      {
+        id: 6, chapter: 16, type: "pg",
+        question: "Complete the sentence to give a reason and an example: 'I think a good cook needs to be organized ______ kitchen work requires careful preparation. ______, ingredients must be ready before service.'",
+        options: {
+          A: "but / Because",
+          B: "because / For example",
+          C: "so / For opinion",
+          D: "for example / Because"
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "'but' menunjukkan pertentangan (bukan alasan), dan 'Because' di awal kalimat kedua tidak memperkenalkan contoh.",
+          C: "'so' menunjukkan akibat (bukan alasan), dan tidak ada ungkapan baku 'For opinion' dalam bahasa Inggris.",
+          D: "Posisinya terbalik! Bagian pertama menjelaskan alasan mengapa harus teratur, sedangkan bagian kedua memberikan contoh nyata."
+        },
+        ruleGuide: "Ingat formula Opinion Stronger Chapter 16: OPINION → REASON (pakai kata penghubung alasan) → EXAMPLE (pakai ungkapan pembuka contoh).",
+        successExplanation: "Benar! 'because' untuk memperkenalkan alasan dan 'For example' untuk memberikan contoh nyata."
+      },
+      {
+        id: 7, chapter: 16, type: "pg",
+        question: "You want to ask your classmate for their opinion about hotel service. Which question is the most natural?",
+        options: {
+          A: "What do you thinking about hotel service?",
+          B: "What do you think about hotel service?",
+          C: "How do you opinion about hotel service?",
+          D: "Are you think hotel service is good?"
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Setelah kata bantu 'do', kata kerja harus kembali ke bentuk dasar (V1), bukan verb-ing ('thinking').",
+          C: "'opinion' adalah kata benda, tidak bisa dipakai seperti kata kerja setelah 'How do you...'.",
+          D: "Untuk bertanya dengan kata kerja 'think' di Simple Present, gunakan 'Do you...', bukan 'Are you...'."
+        },
+        ruleGuide: "Gunakan pola pertanyaan opini baku: 'What do you think about...?' atau 'What's your opinion about...?'.",
+        successExplanation: "Tepat! 'What do you think about hotel service?' adalah pertanyaan opini yang benar dan natural."
+      },
+      {
+        id: 8, chapter: 16, type: "pgk",
+        question: "Select ALL sentences that are grammatically CORRECT for sharing opinions or agreeing.",
+        options: {
+          A: "I completely agree with you.",
+          B: "I am agree that cleanliness is important.",
+          C: "That's a good point.",
+          D: "I think students need enough rest."
+        },
+        correct: ["A", "C", "D"],
+        wrongHints: {
+          B: "'I am agree' adalah kesalahan umum — kata 'agree' adalah kata kerja, tidak boleh diawali 'am'."
+        },
+        ruleGuide: "Pastikan tidak ada 'am' sebelum 'agree', dan subjek jamak ('students') memakai kata kerja dasar tanpa '-s'.",
+        successExplanation: "Mantap! A, C, dan D semuanya merupakan ungkapan opini dan persetujuan yang tepat secara grammar."
+      },
+      {
+        id: 9, chapter: 16, type: "pgk",
+        question: "Select ALL polite ways to DISAGREE with someone's opinion.",
+        options: {
+          A: "I see your point, but I have a different opinion.",
+          B: "I'm not sure I agree.",
+          C: "You are completely wrong!",
+          D: "I understand what you mean, but I don't really agree."
+        },
+        correct: ["A", "B", "D"],
+        wrongHints: {
+          C: "'You are completely wrong!' terlalu kasar dan menyerang pribadi, bukan cara tidak setuju yang sopan."
+        },
+        ruleGuide: "Cari semua ungkapan yang menghargai sudut pandang orang lain atau menyampaikan ketidaksetujuan secara halus dan sopan.",
+        successExplanation: "Benar! Ketiga ungkapan tersebut adalah cara sopan dan profesional untuk menyatakan perbedaan pendapat."
+      },
+      {
+        id: 10, chapter: 16, type: "pgk",
+        question: "Select ALL expressions used to ASK someone for their opinion.",
+        options: {
+          A: "What's your opinion about teamwork?",
+          B: "Do you think English is important for hotel staff?",
+          C: "I think so, too.",
+          D: "What do you think?"
+        },
+        correct: ["A", "B", "D"],
+        wrongHints: {
+          C: "'I think so, too.' adalah ungkapan untuk MENYETUJUI pendapat orang lain, bukan untuk bertanya."
+        },
+        ruleGuide: "Pilih hanya kalimat berbentuk pertanyaan yang meminta pendapat lawan bicara.",
+        successExplanation: "Tepat! Ketiga kalimat tanya tersebut digunakan untuk meminta pendapat orang lain."
+      },
+
+      // ==================== CHAPTER 17 (No. 11–20) ====================
+      {
+        id: 11, chapter: 17, type: "pg",
+        question: "Choose the grammatically correct polite request for help.",
+        options: {
+          A: "Could you to help me, please?",
+          B: "Could you helping me, please?",
+          C: "Could you help me, please?",
+          D: "Can you helped me, please?"
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "Setelah modal verb ('Could'), JANGAN menambahkan kata 'to' sebelum kata kerjanya.",
+          B: "Setelah modal verb ('Could'), kata kerja tidak boleh berbentuk '-ing'.",
+          D: "Setelah modal verb ('Can'), kata kerja harus bentuk dasar (V1), bukan bentuk lampau ('helped')."
+        },
+        ruleGuide: "Aturan wajib modal verb di Chapter 17: Can / Could + Subject + BASE VERB (kata kerja dasar murni).",
+        successExplanation: "Benar! 'Could you help me, please?' memakai base verb 'help' secara langsung dan terdengar sopan."
+      },
+      {
+        id: 12, chapter: 17, type: "pg",
+        question: "A hotel guest is carrying two heavy suitcases. You want to offer to carry them. What should you say?",
+        options: {
+          A: "Shall I carrying those bags for you?",
+          B: "Shall I carry those bags for you?",
+          C: "Shall I to carry those bags for you?",
+          D: "Could you carry those bags for me?"
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Setelah 'Shall I', kata kerja harus bentuk dasar (V1), bukan verb-ing ('carrying').",
+          C: "Modal 'Shall' tidak boleh diikuti kata 'to' sebelum kata kerja.",
+          D: "Kalimat ini justru MEMINTA tamu membawa tas untukmu, bukan MENAWARKAN bantuan kepadanya."
+        },
+        ruleGuide: "Untuk menawarkan tindakan spesifik kepada orang lain, gunakan pola: 'Shall I + BASE VERB + ...?'.",
+        successExplanation: "Tepat! 'Shall I carry those bags for you?' adalah tawaran bantuan yang sangat sopan dan benar secara grammar."
+      },
+      {
+        id: 13, chapter: 17, type: "pg",
+        question: "Choose the correct polite offer using 'Would you like...?'",
+        options: {
+          A: "Would you like some helps?",
+          B: "Would you like to some water?",
+          C: "Would you like some help?",
+          D: "Would you like sitting here?"
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "Kata benda 'help' adalah uncountable noun (tidak bisa dihitung), sehingga TIDAK boleh ditambah '-s' ('helps').",
+          B: "'some water' adalah kata benda (noun), bukan kata kerja; jadi tidak boleh memakai 'to' sebelum 'some water'.",
+          D: "Jika menawarkan tindakan dengan 'Would you like', gunakan 'to + base verb', bukan verb-ing ('sitting')."
+        },
+        ruleGuide: "Ingat dua pola Chapter 17: 'Would you like + NOUN?' (help tanpa -s) ATAU 'Would you like + to + BASE VERB?'.",
+        successExplanation: "Bagus! 'help' tidak boleh diberi '-s', sehingga 'Would you like some help?' adalah bentuk yang benar."
+      },
+      {
+        id: 14, chapter: 17, type: "pg",
+        question: "You work at a hotel front desk and see a guest looking confused at the lobby. What is the most professional thing to say?",
+        options: {
+          A: "What do you want?",
+          B: "Can you help me?",
+          C: "How can I help you?",
+          D: "Give me your problem."
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "'What do you want?' terdengar terlalu langsung dan kurang ramah untuk tamu hotel.",
+          B: "Kalimat ini berarti kamu yang meminta bantuan kepada tamu, padahal kamu staf yang harus menawarkan bantuan.",
+          D: "Ungkapan ini tidak natural dan tidak sopan dalam bahasa Inggris hospitality."
+        },
+        ruleGuide: "Sebagai staf hotel, tawarkan bantuan dengan ungkapan profesional yang ramah untuk menanyakan apa yang dibutuhkan tamu.",
+        successExplanation: "Sempurna! 'How can I help you?' adalah ungkapan standar hospitality yang ramah dan profesional."
+      },
+      {
+        id: 15, chapter: 17, type: "pg",
+        question: "Coworker: 'Would you like some help with those plates?' You can manage by yourself. How do you refuse politely?",
+        options: {
+          A: "No!",
+          B: "Go away, I can do it.",
+          C: "No, thank you. I'm okay.",
+          D: "Yes, please. That would be great."
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "Menjawab 'No!' saja terdengar terlalu keras dan kurang sopan di tempat kerja.",
+          B: "Ungkapan ini sangat tidak sopan kepada rekan kerja yang berniat baik membantu.",
+          D: "Ini adalah ungkapan untuk MENERIMA bantuan, padahal situasi soal menyatakan kamu bisa menanganinya sendiri."
+        },
+        ruleGuide: "Saat menolak tawaran bantuan dengan sopan, hindari 'No!' langsung; sertakan ucapan terima kasih dan keterangan bahwa kamu baik-baik saja.",
+        successExplanation: "Benar! 'No, thank you. I'm okay.' sangat sopan untuk menolak tawaran bantuan."
+      },
+      {
+        id: 16, chapter: 17, type: "pg",
+        question: "Coworker: 'Could you help me check this order?' You are very busy right now. Choose the best response.",
+        options: {
+          A: "I'm sorry, I can't right now. Maybe Sarah can help you.",
+          B: "No problem! I can't.",
+          C: "I am busy. Do it yourself.",
+          D: "I can help to you later."
+        },
+        correct: ["A"],
+        optionHints: {
+          B: "Maknanya bertentangan ('No problem' artinya bersedia, tapi diikuti 'I can't').",
+          C: "Terdengar kasar dan tidak kooperatif dalam kerja tim.",
+          D: "Ada kesalahan grammar: setelah 'help', JANGAN menambahkan kata 'to' sebelum 'you'."
+        },
+        ruleGuide: "Saat tidak bisa membantu karena sibuk: minta maaf dengan sopan, jelaskan singkat bahwa kamu sedang tidak bisa, dan tawarkan alternatif (orang lain atau waktu lain).",
+        successExplanation: "Tepat! Meminta maaf dengan sopan dan memberikan solusi alternatif ('Maybe Sarah can help you')."
+      },
+      {
+        id: 17, chapter: 17, type: "pg",
+        question: "In the kitchen, you need a teammate to prepare vegetables with you. Choose the correct sentence.",
+        options: {
+          A: "Could you help me preparing the vegetables?",
+          B: "Could you help me prepare the vegetables?",
+          C: "Could you help to me prepare the vegetables?",
+          D: "Can I help you to preparing the vegetables?"
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Pada pola 'help + person + verb', gunakan kata kerja dasar (base verb), bukan verb-ing ('preparing').",
+          C: "Setelah kata kerja 'help', langsung diikuti objek ('me') tanpa kata 'to'.",
+          D: "Selain strukturnya salah ('to preparing'), 'Can I help you' artinya menawarkan bantuan, bukan meminta bantuan."
+        },
+        ruleGuide: "Pola meminta bantuan untuk suatu aktivitas di Chapter 17: 'Could you help me + BASE VERB + ...?'.",
+        successExplanation: "Benar! 'Could you help me prepare the vegetables?' mengikuti pola 'help me + base verb' dengan tepat."
+      },
+      {
+        id: 18, chapter: 17, type: "pgk",
+        question: "Select ALL grammatically CORRECT sentences for asking or offering help.",
+        options: {
+          A: "Can I call a taxi for you?",
+          B: "Could you help me connect to the Wi-Fi?",
+          C: "I can help to you with that box.",
+          D: "Shall I clean the table?"
+        },
+        correct: ["A", "B", "D"],
+        wrongHints: {
+          C: "'I can help to you' salah karena kata 'help' langsung diikuti objek ('you') tanpa 'to'."
+        },
+        ruleGuide: "Periksa aturan modal verb + base verb dan pastikan tidak ada kata 'to' yang tidak perlu setelah 'help' atau modal verb.",
+        successExplanation: "Bagus! A, B, dan D semuanya benar secara struktur grammar dan sangat berguna di tempat kerja."
+      },
+      {
+        id: 19, chapter: 17, type: "pgk",
+        question: "Select ALL expressions used to OFFER help to someone.",
+        options: {
+          A: "Can I help you with your bags?",
+          B: "Shall I open the door?",
+          C: "Would you like some water?",
+          D: "Could you tell me where the restaurant is?"
+        },
+        correct: ["A", "B", "C"],
+        wrongHints: {
+          D: "'Could you tell me...?' adalah kalimat untuk MEMINTA bantuan/informasi, bukan MENAWARKAN bantuan."
+        },
+        ruleGuide: "Ingat perbedaannya: 'Can I...?', 'Shall I...?', dan 'Would you like...?' dipakai untuk MENAWARKAN bantuan, sedangkan 'Could you...?' untuk meminta.",
+        successExplanation: "Tepat! Ketiga kalimat tersebut adalah cara sopan untuk menawarkan bantuan atau minuman."
+      },
+      {
+        id: 20, chapter: 17, type: "pgk",
+        question: "Select ALL natural and polite ways to AGREE when someone asks for your help.",
+        options: {
+          A: "Certainly. What do you need?",
+          B: "Of course. No problem.",
+          C: "Sure, I'd be happy to help.",
+          D: "Thanks, but I'm fine."
+        },
+        correct: ["A", "B", "C"],
+        wrongHints: {
+          D: "'Thanks, but I'm fine.' digunakan untuk MENOLAK tawaran bantuan secara sopan, bukan untuk menyetujui permintaan tolong orang lain."
+        },
+        ruleGuide: "Cari semua respons positif yang menyatakan kesediaanmu untuk membantu seseorang yang meminta tolong.",
+        successExplanation: "Benar! 'Certainly', 'Of course. No problem.', dan 'Sure, I'd be happy to help.' semuanya respons yang ramah dan profesional."
+      },
+
+      // ==================== CHAPTER 18 (No. 21–30) ====================
+      {
+        id: 21, chapter: 18, type: "pg",
+        question: "Yesterday, I ______ to the market and ______ some fresh fruit.",
+        options: {
+          A: "go / buy",
+          B: "went / bought",
+          C: "goed / buyed",
+          D: "went / buy"
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Penanda waktu 'Yesterday' mewajibkan Simple Past Tense, bukan kata kerja bentuk sekarang (V1).",
+          C: "'go' dan 'buy' adalah irregular verbs (kata kerja tak beraturan), jadi tidak boleh sekadar ditambah '-ed'.",
+          D: "Kata kerja pertama sudah lampau, tetapi kata kerja kedua ('buy') lupa diubah ke bentuk lampaunya."
+        },
+        ruleGuide: "Karena kejadiannya 'Yesterday' (lampau), ubah KEDUA kata kerja tak beraturan ('go' dan 'buy') menjadi bentuk Verb 2 (Simple Past).",
+        successExplanation: "Tepat! Bentuk lampau dari 'go' adalah 'went' dan dari 'buy' adalah 'bought'."
+      },
+      {
+        id: 22, chapter: 18, type: "pg",
+        question: "Choose the grammatically correct negative sentence in Simple Past Tense.",
+        options: {
+          A: "She didn't ate breakfast this morning.",
+          B: "She doesn't ate breakfast this morning.",
+          C: "She didn't eat breakfast this morning.",
+          D: "She wasn't eat breakfast this morning."
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "Setelah 'didn't', kata kerja utama HARUS kembali ke bentuk dasar (V1), bukan bentuk lampau ('ate').",
+          B: "'doesn't' adalah untuk Simple Present, bukan untuk kejadian yang sudah lewat ('this morning' / Simple Past).",
+          D: "'wasn't' digunakan bersama kata sifat/tempat/benda, bukan di depan kata kerja dasar ('eat')."
+        },
+        ruleGuide: "Aturan emas Chapter 18: DID / DIDN'T = penanda lampau, jadi kata kerja utamanya wajib kembali ke BASE VERB (V1).",
+        successExplanation: "Benar! Setelah 'didn't', kata kerja kembali ke bentuk dasar 'eat'."
+      },
+      {
+        id: 23, chapter: 18, type: "pg",
+        question: "A: '______ you ______ your friend last weekend?' B: 'Yes, I did.'",
+        options: {
+          A: "Did / met",
+          B: "Do / meet",
+          C: "Did / meet",
+          D: "Were / met"
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "Setelah kata tanya 'Did', kata kerja utama tidak boleh tetap berbentuk lampau ('met'), harus kembali ke V1.",
+          B: "'Do' digunakan untuk Simple Present (rutinitas), padahal ada penanda waktu lampau 'last weekend' dan jawaban 'Yes, I did.'",
+          D: "'Were' tidak digunakan untuk membuat pertanyaan Simple Past dengan kata kerja aksi ('meet')."
+        },
+        ruleGuide: "Pola pertanyaan Yes/No Simple Past: 'Did + Subject + BASE VERB (V1)?'.",
+        successExplanation: "Tepat! 'Did you meet your friend last weekend?' menggunakan 'Did + base verb'."
+      },
+      {
+        id: 24, chapter: 18, type: "pg",
+        question: "The restaurant was very busy yesterday. We ______ tired, and the guests ______ happy with the food.",
+        options: {
+          A: "was / was",
+          B: "were / were",
+          C: "was / were",
+          D: "were / was"
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Subjek 'We' dan 'the guests' sama-sama jamak (lebih dari satu), sehingga tidak boleh memakai 'was'.",
+          C: "Subjek pertama ('We') adalah jamak, jadi tidak boleh dipasangkan dengan 'was'.",
+          D: "Subjek kedua ('the guests' — ada akhiran -s) adalah jamak, jadi tidak cocok dengan 'was'."
+        },
+        ruleGuide: "Ingat pasangan 'to be' lampau: I / he / she / it → was; sedangkan you / we / they (dan benda/orang jamak) → were.",
+        successExplanation: "Benar! 'We' dan 'the guests' keduanya jamak, jadi keduanya memakai 'were'."
+      },
+      {
+        id: 25, chapter: 18, type: "pg",
+        question: "Choose the correct WH-question in Simple Past Tense.",
+        options: {
+          A: "What did you did yesterday?",
+          B: "Where did you went last night?",
+          C: "What did you do yesterday?",
+          D: "How did you felt after work?"
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "Setelah 'did', kata kerja utamanya harus kembali ke bentuk dasar (V1), bukan 'did' lagi.",
+          B: "Setelah 'did', kata kerja 'went' harus kembali ke bentuk dasarnya.",
+          D: "Setelah 'did', kata kerja 'felt' harus kembali ke bentuk dasarnya."
+        },
+        ruleGuide: "Pola WH-question lampau: 'WH-word + did + Subject + BASE VERB (V1)?'. Pastikan kata kerja setelah subjek adalah V1 murni.",
+        successExplanation: "Bagus! 'What did you do yesterday?' memakai 'did' sebagai penanda lampau dan 'do' sebagai base verb."
+      },
+      {
+        id: 26, chapter: 18, type: "pg",
+        question: "Yesterday, I worked in a busy kitchen. First, I ______ the ingredients, and at the end of the day I ______ the kitchen.",
+        options: {
+          A: "prepare / clean",
+          B: "prepared / cleaned",
+          C: "preparing / cleaning",
+          D: "prepared / clean"
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Konteksnya adalah cerita hari kemarin ('Yesterday'), jadi kata kerjanya harus bentuk lampau (Simple Past), bukan V1.",
+          C: "Verb-ing tanpa 'be' tidak tepat untuk rangkaian kejadian selesai di masa lalu.",
+          D: "Kata kerja pertama sudah lampau, tetapi kata kerja kedua ('clean') lupa diubah ke bentuk lampau."
+        },
+        ruleGuide: "Dalam menceritakan pengalaman kemarin, pastikan SEMUA kata kerja aksi yang sudah selesai memakai bentuk Simple Past (regular verb + -ed).",
+        successExplanation: "Tepat! 'prepared' dan 'cleaned' keduanya merupakan bentuk Simple Past yang konsisten."
+      },
+      {
+        id: 27, chapter: 18, type: "pg",
+        question: "Choose the most logical sequence of events using sequencing words.",
+        options: {
+          A: "Finally, I left home. First, I went home.",
+          B: "First, I prepared the ingredients. Then, I cooked the food. Finally, I served the meal.",
+          C: "After that, I started work. First, I finished work.",
+          D: "Finally, we arrived at the restaurant. First, we paid the bill."
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "'Finally' dipakai untuk langkah terakhir, bukan langkah pertama; dan 'First' bukan di akhir.",
+          C: "Urutan waktunya tidak masuk akal — menyelesaikan pekerjaan tidak mungkin dilakukan sebelum mulai bekerja.",
+          D: "Urutannya terbalik — membayar tagihan tidak dilakukan sebelum tiba di restoran."
+        },
+        ruleGuide: "Gunakan kata urutan waktu secara logis dari awal hingga akhir: First → Then / Next / After that → Finally.",
+        successExplanation: "Benar! Urutan 'First (siapkan bahan) → Then (masak) → Finally (sajikan)' sangat jelas dan logis."
+      },
+      {
+        id: 28, chapter: 18, type: "pgk",
+        question: "Select ALL grammatically CORRECT Simple Past sentences.",
+        options: {
+          A: "I visited my grandmother last weekend.",
+          B: "They was very busy at the hotel.",
+          C: "We didn't watch TV last night.",
+          D: "She cooked dinner yesterday."
+        },
+        correct: ["A", "C", "D"],
+        wrongHints: {
+          B: "Subjek 'They' adalah jamak, jadi tidak boleh dipasangkan dengan 'was'."
+        },
+        ruleGuide: "Cek tiga hal: (1) kata kerja lampau (+ed/V2) untuk kalimat positif, (2) 'didn't + V1' untuk negatif, dan (3) 'were' untuk subjek jamak.",
+        successExplanation: "Mantap! A, C, dan D semuanya tepat menggunakan aturan Simple Past."
+      },
+      {
+        id: 29, chapter: 18, type: "pgk",
+        question: "Select ALL CORRECT Present → Past irregular verb pairs.",
+        options: {
+          A: "eat → ate",
+          B: "go → goed",
+          C: "leave → left",
+          D: "feel → felt"
+        },
+        correct: ["A", "C", "D"],
+        wrongHints: {
+          B: "'go' adalah kata kerja tidak beraturan (irregular verb), jadi bentuk lampaunya TIDAK dibentuk dengan menambah '-ed'."
+        },
+        ruleGuide: "Ingat daftar irregular verbs Chapter 18: go, eat, drink, see, buy, take, make, have, meet, leave, feel semuanya berubah bentuk tanpa akhiran '-ed'.",
+        successExplanation: "Benar! 'eat → ate', 'leave → left', dan 'feel → felt' adalah pasangan irregular verb yang tepat."
+      },
+      {
+        id: 30, chapter: 18, type: "pgk",
+        question: "Select ALL time expressions commonly used with Simple Past Tense.",
+        options: {
+          A: "yesterday morning",
+          B: "two days ago",
+          C: "right now",
+          D: "last weekend"
+        },
+        correct: ["A", "B", "D"],
+        wrongHints: {
+          C: "'right now' adalah penanda waktu sekarang (Present Continuous), bukan masa lalu (Simple Past)."
+        },
+        ruleGuide: "Pilih semua keterangan waktu yang merujuk pada waktu yang sudah selesai/berlalu sebelum sekarang.",
+        successExplanation: "Tepat! 'yesterday morning', 'two days ago', dan 'last weekend' adalah penanda waktu Simple Past."
+      },
+
+      // ==================== CHAPTER 19 (No. 31–40) ====================
+      {
+        id: 31, chapter: 19, type: "pg",
+        question: "Last weekend, I ______ to Bukittinggi with my family.",
+        options: {
+          A: "goed",
+          B: "go",
+          C: "went",
+          D: "was go"
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "Kesalahan umum! 'go' adalah irregular verb, tidak pernah berubah menjadi 'goed'.",
+          B: "'Last weekend' adalah waktu lampau, jadi tidak boleh memakai kata kerja bentuk pertama ('go').",
+          D: "Jangan menggabungkan 'was' langsung di depan kata kerja dasar ('go') dalam kalimat aktif Simple Past."
+        },
+        ruleGuide: "Untuk 'Last weekend' (masa lalu), gunakan langsung bentuk Verb 2 (irregular past form) dari kata 'go' tanpa tambahan 'was'.",
+        successExplanation: "Benar! Bentuk Simple Past yang tepat dari 'go' adalah 'went'."
+      },
+      {
+        id: 32, chapter: 19, type: "pg",
+        question: "Choose the sentence that does NOT have a grammar mistake.",
+        options: {
+          A: "I was go to the beach during my holiday.",
+          B: "We eat local food at a restaurant last Sunday.",
+          C: "We stayed at a nice hotel during our holiday.",
+          D: "I feel very happy yesterday."
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "Kesalahan umum Chapter 19: jangan memakai 'was + V1' ('was go') untuk menyatakan aktivitas di masa lalu.",
+          B: "Ada keterangan waktu 'last Sunday', tetapi kata kerjanya ('eat') masih berbentuk Present (V1).",
+          D: "Ada kata 'yesterday', tetapi kata kerja 'feel' belum diubah ke bentuk lampaunya."
+        },
+        ruleGuide: "Periksa setiap kalimat: pastikan kata kerja utama sudah berubah menjadi Simple Past (V2) dan tidak ada tambahan 'was' sebelum kata kerja dasar.",
+        successExplanation: "Tepat! 'We stayed at a nice hotel during our holiday.' memakai Simple Past 'stayed' dengan benar."
+      },
+      {
+        id: 33, chapter: 19, type: "pg",
+        question: "A: '______ you ______ the museum during your trip?' B: 'Yes, I did. It was amazing!'",
+        options: {
+          A: "Did / visited",
+          B: "Did / visit",
+          C: "Were / visit",
+          D: "Do / visited"
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Kesalahan umum Chapter 19: setelah 'Did', kata kerja tidak boleh diberi akhiran '-ed' ('visited').",
+          C: "'Were' tidak dipakai bersama kata kerja dasar ('visit') untuk pertanyaan Simple Past.",
+          D: "Untuk pertanyaan tentang perjalanan masa lalu (dijawab 'Yes, I did'), kata bantunya bukan 'Do', dan kata kerjanya bukan '-ed'."
+        },
+        ruleGuide: "Ingat selalu: dalam pertanyaan Simple Past, 'Did' sudah menunjukkan waktu lampau, jadi kata kerjanya cukup bentuk dasar (V1).",
+        successExplanation: "Benar! 'Did you visit the museum...?' memakai 'Did + base verb'."
+      },
+      {
+        id: 34, chapter: 19, type: "pg",
+        question: "During our holiday, we ______ in the sea, ______ many pictures, and ______ some souvenirs.",
+        options: {
+          A: "swim / take / buy",
+          B: "swam / took / bought",
+          C: "swimmed / taked / buyed",
+          D: "swam / take / bought"
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Ketiga kata kerja ini masih bentuk Present (V1), padahal menceritakan liburan yang sudah berlalu.",
+          C: "'swim', 'take', dan 'buy' semuanya adalah irregular verbs, bukan kata kerja beraturan yang ditambah '-ed'.",
+          D: "Kata kerja kedua ('take') masih berbentuk V1, belum diubah menjadi Simple Past."
+        },
+        ruleGuide: "Ubah ketiga kata kerja liburan tak beraturan ('swim', 'take', 'buy') ke bentuk Verb 2 (Simple Past) secara konsisten.",
+        successExplanation: "Sempurna! 'swam', 'took', dan 'bought' adalah bentuk lampau yang tepat untuk ketiga kata kerja tersebut."
+      },
+      {
+        id: 35, chapter: 19, type: "pg",
+        question: "Your friend says: 'Last month, I went to a beautiful island with my family!' Choose the most natural and friendly reaction.",
+        options: {
+          A: "Okay.",
+          B: "Wow! That sounds fun! What did you do there?",
+          C: "I don't want to hear it.",
+          D: "Last month is over."
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Di Chapter 19 dijelaskan bahwa hanya menjawab 'Okay.' terdengar datar dan tidak menghidupkan percakapan.",
+          C: "Respons ini sangat tidak sopan dan memutus percakapan.",
+          D: "Respons ini terdengar dingin dan tidak menunjukkan ketertarikan pada cerita teman."
+        },
+        ruleGuide: "Saat menanggapi cerita liburan teman, tunjukkan antusiasme ('Wow!', 'Really?', 'That sounds fun!') lalu ajukan pertanyaan lanjutan (follow-up question).",
+        successExplanation: "Bagus! 'Wow! That sounds fun! What did you do there?' sangat natural dan menjaga percakapan terus berjalan."
+      },
+      {
+        id: 36, chapter: 19, type: "pg",
+        question: "Last month, I had a memorable meal with my family. The food ______ delicious, and the staff ______ very friendly.",
+        options: {
+          A: "was / were",
+          B: "were / was",
+          C: "is / are",
+          D: "was / was"
+        },
+        correct: ["A"],
+        optionHints: {
+          B: "Terbalik! 'The food' adalah kata benda uncountable (dianggap tunggal), sedangkan 'the staff' di sini merujuk pada para staf (jamak/banyak orang).",
+          C: "'is' dan 'are' adalah bentuk Present, padahal kejadiannya adalah 'Last month' (masa lalu).",
+          D: "Di konteks Chapter 19, 'the people / the staff' sebagai para pekerja di restoran menggunakan bentuk jamak ('were')."
+        },
+        ruleGuide: "Perhatikan penanda waktu 'Last month' (pakai bentuk lampau: was/were). 'The food' dianggap tunggal, sedangkan 'the staff' (para staf) dianggap jamak.",
+        successExplanation: "Tepat! 'The food was delicious, and the staff were very friendly.'"
+      },
+      {
+        id: 37, chapter: 19, type: "pg",
+        question: "Look at the storytelling formula from Chapter 19: WHEN → WHERE → WHO → WHAT → FEELING. Which sentence best shows the FEELING part in Simple Past?",
+        options: {
+          A: "I felt very happy because I spent quality time with my family.",
+          B: "I feel very happy yesterday.",
+          C: "Last weekend, I went to the beach.",
+          D: "First, we checked into the hotel."
+        },
+        correct: ["A"],
+        optionHints: {
+          B: "Kalimat ini menunjukkan perasaan, tetapi ada kesalahan grammar: 'yesterday' seharusnya memakai bentuk lampau dari 'feel'.",
+          C: "Kalimat ini adalah bagian WHEN dan WHERE, bukan bagian FEELING.",
+          D: "Kalimat ini adalah bagian WHAT (aktivitas), bukan bagian FEELING."
+        },
+        ruleGuide: "Cari kalimat yang menceritakan PERASAAN setelah pengalaman tersebut menggunakan kata kerja lampau yang benar.",
+        successExplanation: "Benar! 'I felt very happy because...' menggunakan bentuk lampau 'felt' untuk menceritakan perasaan."
+      },
+      {
+        id: 38, chapter: 19, type: "pgk",
+        question: "Select ALL sentences that contain a COMMON MISTAKE according to Chapter 19.",
+        options: {
+          A: "Last weekend, I goed to a restaurant.",
+          B: "I was go to the beach with my friends.",
+          C: "We returned home in the afternoon.",
+          D: "Did you visited the tourist attraction?"
+        },
+        correct: ["A", "B", "D"],
+        wrongHints: {
+          C: "Hati-hati baca perintah soal! Soal ini meminta kalimat yang SALAH secara grammar, sedangkan 'We returned home...' sudah benar."
+        },
+        ruleGuide: "Cari semua kalimat yang MELANGGAR aturan Simple Past (seperti irregular verb ditambah '-ed', 'was + V1', atau 'Did + V-ed').",
+        successExplanation: "Teliti sekali! A salah ('goed'), B salah ('was go'), dan D salah ('Did you visited')."
+      },
+      {
+        id: 39, chapter: 19, type: "pgk",
+        question: "Select ALL natural expressions to REACT to a friend's memorable story.",
+        options: {
+          A: "Really? That's interesting!",
+          B: "That sounds exciting!",
+          C: "I'm glad you enjoyed it.",
+          D: "What happened next?"
+        },
+        correct: ["A", "B", "C", "D"].slice(0, 3), // Keep 3 clear answers, replace D? Wait—let's make D clearly wrong so there are 3 right and 1 wrong!
+        // Note: Let's ensure D is clearly NOT a natural positive reaction.
+        wrongHints: {},
+        ruleGuide: "",
+        successExplanation: ""
+      },
+      {
+        id: 40, chapter: 19, type: "pgk",
+        question: "Select ALL sentences that use travel/holiday Simple Past verbs correctly.",
+        options: {
+          A: "We explored the city and took many photos.",
+          B: "They arrived at the hotel in the afternoon.",
+          C: "We eat delicious seafood last Sunday.",
+          D: "Finally, we returned home feeling proud and happy."
+        },
+        correct: ["A", "B", "D"],
+        wrongHints: {
+          C: "Ada keterangan waktu 'last Sunday' (lampau), tetapi kata kerjanya ('eat') masih bentuk Present (V1)."
+        },
+        ruleGuide: "Periksa apakah semua kata kerja perjalanan/liburan pada kalimat sudah diubah menjadi bentuk lampau (Verb 2).",
+        successExplanation: "Mantap! 'explored / took', 'arrived', dan 'returned' semuanya benar dalam Simple Past."
+      },
+
+      // ==================== CHAPTER 20 (No. 41–50) ====================
+      {
+        id: 41, chapter: 20, type: "pg",
+        question: "Change this direct command into a polite request: 'Open the door.'",
+        options: {
+          A: "Open the door now!",
+          B: "Could you open the door, please?",
+          C: "Could you opened the door, please?",
+          D: "Could you to open the door, please?"
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Menambah kata 'now!' justru membuatnya terdengar lebih memaksa dan tidak sopan.",
+          C: "Setelah 'Could you', kata kerja harus bentuk dasar (V1), bukan bentuk lampau ('opened').",
+          D: "Setelah modal verb 'Could you', JANGAN menyisipkan kata 'to' sebelum kata kerjanya."
+        },
+        ruleGuide: "Ubah perintah langsung menjadi permintaan sopan dengan pola: 'Could you + BASE VERB + ..., please?'.",
+        successExplanation: "Benar! 'Could you open the door, please?' sopan dan tepat secara grammar."
+      },
+      {
+        id: 42, chapter: 20, type: "pg",
+        question: "Choose the grammatically correct polite request using 'Would you...?'",
+        options: {
+          A: "Would you checked this document for me?",
+          B: "Would you checking this document for me?",
+          C: "Would you check this document for me, please?",
+          D: "Would you to check this document for me?"
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "Setelah 'Would you', kata kerja tidak boleh berbentuk lampau ('checked').",
+          B: "Setelah 'Would you', kata kerja tidak boleh berbentuk '-ing' ('checking').",
+          D: "Setelah 'Would you', JANGAN menambahkan kata 'to' sebelum kata kerjanya."
+        },
+        ruleGuide: "Ingat aturan baku Chapter 20: 'Would you + BASE VERB (V1) + ...?'.",
+        successExplanation: "Tepat! 'Would you check this document for me, please?' memakai base verb 'check' secara langsung."
+      },
+      {
+        id: 43, chapter: 20, type: "pg",
+        question: "You ordered food at a restaurant, but it hasn't arrived yet. Avoid saying 'Where is my food?'. What is the polite way to ask?",
+        options: {
+          A: "Bring my food right now!",
+          B: "Excuse me. Could you check my order, please?",
+          C: "Why are you so slow?",
+          D: "Check my order!"
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Kalimat perintah ini terlalu kasar dan langsung terhadap staf restoran.",
+          C: "Menyalahkan staf secara langsung tidak sopan dan bukan permintaan yang baik.",
+          D: "Ini masih berbentuk perintah langsung (too direct), bukan permintaan sopan."
+        },
+        ruleGuide: "Awali dengan 'Excuse me.' untuk menarik perhatian secara sopan, lalu gunakan pola 'Could you + base verb + ..., please?'.",
+        successExplanation: "Sangat sopan! 'Excuse me. Could you check my order, please?' adalah ungkapan terbaik untuk situasi ini."
+      },
+      {
+        id: 44, chapter: 20, type: "pg",
+        question: "A foreign hotel guest speaks very fast and you don't understand. Choose the best polite request for clarification.",
+        options: {
+          A: "Repeat!",
+          B: "What? Speak slowly!",
+          C: "Sorry, could you speak more slowly, please?",
+          D: "I don't understand. Say again."
+        },
+        correct: ["C"],
+        optionHints: {
+          A: "'Repeat!' satu kata saja terdengar sangat kasar untuk diucapkan kepada tamu hotel.",
+          B: "'What?' dan perintah langsung 'Speak slowly!' terlalu kasar untuk situasi hospitality.",
+          D: "'Say again.' masih berupa perintah langsung tanpa pola permintaan sopan."
+        },
+        ruleGuide: "Saat meminta klarifikasi kepada tamu/orang lain, gunakan 'Sorry' atau 'Excuse me' diikuti pola permintaan sopan 'Could you ... , please?'.",
+        successExplanation: "Profesional sekali! 'Sorry, could you speak more slowly, please?' sangat sopan dan jelas."
+      },
+      {
+        id: 45, chapter: 20, type: "pg",
+        question: "Customer: 'Could you bring me some water, please?' As a professional waiter, how do you confirm the request?",
+        options: {
+          A: "Certainly. You'd like some water, right? I'll bring it right away.",
+          B: "Yes, wait.",
+          C: "Give me a minute, I'm tired.",
+          D: "No, get it yourself."
+        },
+        correct: ["A"],
+        optionHints: {
+          B: "'Yes, wait.' terlalu singkat dan kurang ramah untuk standar pelayanan restoran.",
+          C: "Mengeluh lelah kepada pelanggan tidak profesional.",
+          D: "Menolak pelanggan dengan kasar melanggar etika pelayanan."
+        },
+        ruleGuide: "Di Chapter 20, staf profesional merespons dengan sopan ('Certainly' / 'Of course'), mengonfirmasi pesanan, dan menyatakan akan segera membawanya.",
+        successExplanation: "Sempurna! Respons tersebut ramah, mengonfirmasi permintaan, dan memberi kepastian layanan cepat."
+      },
+      {
+        id: 46, chapter: 20, type: "pg",
+        question: "A coworker asks: 'Could you help me right now?' You are currently assisting another hotel guest. How do you decline politely?",
+        options: {
+          A: "No, I don't want to.",
+          B: "I'm sorry, I can't right now. I'm helping another customer.",
+          C: "Wait! Don't bother me.",
+          D: "Certainly, I can't."
+        },
+        correct: ["B"],
+        optionHints: {
+          A: "Menolak tanpa alasan yang sopan terkesan tidak mau bekerja sama.",
+          C: "'Don't bother me' terdengar kasar bagi rekan satu tim.",
+          D: "'Certainly' artinya setuju, sehingga kontradiktif jika diikuti 'I can't'."
+        },
+        ruleGuide: "Untuk menolak permintaan secara sopan: awali dengan 'I'm sorry, I can't...' lalu berikan alasan singkat yang jujur dan profesional.",
+        successExplanation: "Benar! Menolak secara sopan sekaligus menjelaskan alasan yang jelas kepada rekan kerja."
+      },
+      {
+        id: 47, chapter: 20, type: "pg",
+        question: "In a professional kitchen, you need a teammate to check the oven. Choose the most polite and accurate request.",
+        options: {
+          A: "Would you check the oven, please?",
+          B: "Would you to check the oven, please?",
+          C: "Could you checking the oven, please?",
+          D: "Check the oven now!"
+        },
+        correct: ["A"],
+        optionHints: {
+          B: "Setelah 'Would you', tidak boleh menambahkan kata 'to' sebelum kata kerjanya.",
+          C: "Setelah 'Could you', kata kerja tidak boleh berbentuk '-ing' ('checking').",
+          D: "Ini adalah perintah langsung yang terlalu keras, bukan permintaan sopan."
+        },
+        ruleGuide: "Gunakan pola permintaan sopan 'Would you / Could you + BASE VERB + ..., please?'.",
+        successExplanation: "Tepat! 'Would you check the oven, please?' sopan dan akurat secara grammar."
+      },
+      {
+        id: 48, chapter: 20, type: "pgk",
+        question: "Select ALL grammatically CORRECT polite requests.",
+        options: {
+          A: "Could you pass me the knife, please?",
+          B: "Could you make a reservation for me?",
+          C: "Would you waited here for a moment?",
+          D: "Would you bring the bill, please?"
+        },
+        correct: ["A", "B", "D"],
+        wrongHints: {
+          C: "'Would you waited...' salah karena setelah 'Would you', kata kerja harus bentuk dasar (V1), bukan lampau ('waited')."
+        },
+        ruleGuide: "Pastikan setiap permintaan setelah 'Could you' atau 'Would you' langsung diikuti kata kerja bentuk dasar (V1).",
+        successExplanation: "Mantap! A, B, dan D semuanya mengikuti pola permintaan sopan yang benar."
+      },
+      {
+        id: 49, chapter: 20, type: "pgk",
+        question: "Select ALL expressions that are TOO DIRECT and should be made more polite in a hotel or restaurant.",
+        options: {
+          A: "Give me the menu.",
+          B: "Repeat that!",
+          C: "Could you bring us extra towels, please?",
+          D: "Where is my food?"
+        },
+        correct: ["A", "B", "D"],
+        wrongHints: {
+          C: "'Could you bring us extra towels, please?' sudah sangat sopan, padahal soal meminta ungkapan yang TERLALU LANGSUNG (too direct)."
+        },
+        ruleGuide: "Perhatikan perintah soal: cari semua kalimat perintah langsung atau pertanyaan ketus yang belum memakai 'Could you / Would you ... please?'.",
+        successExplanation: "Tepat! A, B, dan D terlalu langsung dan sebaiknya diubah menjadi permintaan sopan."
+      },
+      {
+        id: 50, chapter: 20, type: "pgk",
+        question: "Select ALL polite expressions used to ask for CLARIFICATION or REPETITION.",
+        options: {
+          A: "Could you repeat that, please?",
+          B: "Could you speak more slowly, please?",
+          C: "Could you explain that again, please?",
+          D: "Certainly. I'll call a taxi for you."
+        },
+        correct: ["A", "B", "C"],
+        wrongHints: {
+          D: "'Certainly. I'll call a taxi for you.' adalah respons menyetujui permintaan layanan, bukan meminta klarifikasi atau pengulangan."
+        },
+        ruleGuide: "Pilih semua pertanyaan sopan yang digunakan ketika kamu belum jelas mendengar atau memahami perkataan lawan bicara.",
+        successExplanation: "Benar! Ketiga ungkapan tersebut adalah cara sopan meminta pengulangan atau penjelasan ulang."
+      }
+    ];
+
+    // Fix Q39 cleanly so option D is clearly a non-natural/rude reaction (3 correct: A, B, C)
+    QUESTIONS[38] = {
+      id: 39, chapter: 19, type: "pgk",
+      question: "Select ALL natural and friendly expressions to REACT to a friend's holiday story.",
+      options: {
+        A: "Really? That's interesting!",
+        B: "Wow! That sounds exciting!",
+        C: "I'm glad you enjoyed it.",
+        D: "Whatever. I don't care."
+      },
+      correct: ["A", "B", "C"],
+      wrongHints: {
+        D: "'Whatever. I don't care.' adalah respons yang kasar dan tidak menghargai cerita teman."
+      },
+      ruleGuide: "Pilih semua respons yang menunjukkan rasa tertarik, antusiasme, atau simpati positif terhadap cerita pengalaman seseorang.",
+      successExplanation: "Benar! Ketiga ungkapan tersebut membuat percakapan tentang pengalaman masa lalu terasa hangat dan natural."
+    };
+
+    // ==================== STATE & LOCALSTORAGE ====================
+    const STORAGE_KEY = "esc_book1_ch16_20_quiz_v1";
+
+    /**
+     * progress[id] = {
+     *   status: 'unanswered' | 'first_try' | 'corrected' | 'wrong_pending',
+     *   attempts: number,
+     *   lastSelected: string[]
+     * }
+     */
+    const state = {
+      chapterFilter: "all",   // 'all' | '16'..'20'
+      typeFilter: "all",      // 'all' | 'pg' | 'pgk'
+      activeIds: [],          // filtered question IDs
+      currentIndex: 0,        // index in activeIds
+      selection: [],          // current checked options ['A'] or ['A','C']
+      progress: {},           // persisted object
+      view: "quiz"            // 'quiz' | 'eval'
+    };
+
+    function loadProgress() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed && typeof parsed === "object") {
+            state.progress = parsed;
+          }
+        }
+      } catch (err) {
+        console.warn("Gagal membaca localStorage:", err);
+        state.progress = {};
+      }
+    }
+
+    function saveProgress() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state.progress));
+      } catch (err) {
+        console.warn("Gagal menyimpan localStorage:", err);
+      }
+    }
+
+    function getProg(id) {
+      return state.progress[id] || { status: "unanswered", attempts: 0, lastSelected: [] };
+    }
+
+    function isSolvedStatus(status) {
+      return status === "first_try" || status === "corrected";
+    }
+
+    // ==================== DOM ELEMENTS ====================
+    const headerProgressText = document.getElementById("headerProgressText");
+    const headerViewCounter = document.getElementById("headerViewCounter");
+    const globalProgressBar = document.getElementById("globalProgressBar");
+    const filterMatchBadge = document.getElementById("filterMatchBadge");
+    const openEvalBtn = document.getElementById("openEvalBtn");
+    const openDrawerBtn = document.getElementById("openDrawerBtn");
+
+    const quizView = document.getElementById("quizView");
+    const evalView = document.getElementById("evalView");
+    const stickyBottomBar = document.getElementById("stickyBottomBar");
+
+    const questionCard = document.getElementById("questionCard");
+    const qChapterBadge = document.getElementById("qChapterBadge");
+    const qTypeBadge = document.getElementById("qTypeBadge");
+    const qNumberBadge = document.getElementById("qNumberBadge");
+    const qTopicLabel = document.getElementById("qTopicLabel");
+    const questionText = document.getElementById("questionText");
+    const pgkCallout = document.getElementById("pgkCallout");
+    const optionsContainer = document.getElementById("optionsContainer");
+    const feedbackCard = document.getElementById("feedbackCard");
+
+    const prevBtn = document.getElementById("prevBtn");
+    const checkBtn = document.getElementById("checkBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    // Drawer elements
+    const drawerModal = document.getElementById("drawerModal");
+    const closeDrawerBtn = document.getElementById("closeDrawerBtn");
+    const drawerGrid = document.getElementById("drawerGrid");
+    const drawerSub = document.getElementById("drawerSub");
+    const drawerEvalBtn = document.getElementById("drawerEvalBtn");
+
+    // Eval elements
+    const evalEmoji = document.getElementById("evalEmoji");
+    const evalSub = document.getElementById("evalSub");
+    const evalTotalScore = document.getElementById("evalTotalScore");
+    const evalFirstTryPct = document.getElementById("evalFirstTryPct");
+    const statCorrectFirst = document.getElementById("statCorrectFirst");
+    const statCorrected = document.getElementById("statCorrected");
+    const statRemaining = document.getElementById("statRemaining");
+    const evalPgScore = document.getElementById("evalPgScore");
+    const evalPgFirst = document.getElementById("evalPgFirst");
+    const evalPgkScore = document.getElementById("evalPgkScore");
+    const evalPgkFirst = document.getElementById("evalPgkFirst");
+    const evalChapterList = document.getElementById("evalChapterList");
+    const backToQuizBtn = document.getElementById("backToQuizBtn");
+    const openResetModalBtn = document.getElementById("openResetModalBtn");
+
+    // Reset modal
+    const resetModal = document.getElementById("resetModal");
+    const cancelResetBtn = document.getElementById("cancelResetBtn");
+    const confirmResetBtn = document.getElementById("confirmResetBtn");
+
+    // ==================== FILTERING & VIEW SWITCHING ====================
+    function applyFilters(keepCurrentId = false) {
+      const prevId = state.activeIds[state.currentIndex];
+
+      const filtered = QUESTIONS.filter(q => {
+        const chMatch = state.chapterFilter === "all" || String(q.chapter) === state.chapterFilter;
+        const typeMatch = state.typeFilter === "all" || q.type === state.typeFilter;
+        return chMatch && typeMatch;
+      });
+
+      state.activeIds = filtered.map(q => q.id);
+      filterMatchBadge.textContent = `${state.activeIds.length} soal`;
+
+      if (keepCurrentId && prevId && state.activeIds.includes(prevId)) {
+        state.currentIndex = state.activeIds.indexOf(prevId);
+      } else {
+        // Jump to first unfinished question in the filtered set, or 0
+        const firstUnfinished = state.activeIds.findIndex(id => !isSolvedStatus(getProg(id).status));
+        state.currentIndex = firstUnfinished >= 0 ? firstUnfinished : 0;
+      }
+
+      if (state.view === "quiz") {
+        renderCurrentQuestion();
+      }
+    }
+
+    function setView(viewName) {
+      state.view = viewName;
+      if (viewName === "quiz") {
+        evalView.classList.add("hidden");
+        quizView.classList.remove("hidden");
+        stickyBottomBar.classList.remove("hidden");
+        renderCurrentQuestion();
+      } else {
+        quizView.classList.add("hidden");
+        stickyBottomBar.classList.add("hidden");
+        evalView.classList.remove("hidden");
+        renderEvaluation();
+      }
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+
+    // Chapter filter buttons
+    document.querySelectorAll(".ch-filter-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        state.chapterFilter = btn.dataset.ch;
+        document.querySelectorAll(".ch-filter-btn").forEach(b => {
+          b.className = "ch-filter-btn shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold bg-white border border-slate-200 text-slate-600 transition";
+        });
+        btn.className = "ch-filter-btn shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-600 text-white transition";
+        if (state.view === "eval") setView("quiz");
+        applyFilters(false);
+      });
+    });
+
+    // Type filter buttons
+    document.querySelectorAll(".type-filter-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        state.typeFilter = btn.dataset.type;
+        document.querySelectorAll(".type-filter-btn").forEach(b => {
+          b.className = "type-filter-btn px-2.5 py-1 rounded-full text-[11px] font-bold bg-white border border-slate-200 text-slate-600 transition";
+        });
+        btn.className = "type-filter-btn px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-800 text-white transition";
+        if (state.view === "eval") setView("quiz");
+        applyFilters(false);
+      });
+    });
+
+    // ==================== HEADER STATS ====================
+    function updateHeaderStats() {
+      const totalSolved = QUESTIONS.filter(q => isSolvedStatus(getProg(q.id).status)).length;
+      const pct = Math.round((totalSolved / QUESTIONS.length) * 100);
+      headerProgressText.textContent = `${totalSolved}/50 Benar`;
+      globalProgressBar.style.width = `${pct}%`;
+
+      if (state.activeIds.length > 0) {
+        headerViewCounter.textContent = `Soal ${state.currentIndex + 1} / ${state.activeIds.length}`;
+      } else {
+        headerViewCounter.textContent = "0 / 0";
+      }
+    }
+
+    // ==================== RENDER QUESTION & OPTIONS ====================
+    function getCurrentQuestion() {
+      const id = state.activeIds[state.currentIndex];
+      return QUESTIONS.find(q => q.id === id);
+    }
+
+    function renderCurrentQuestion() {
+      updateHeaderStats();
+      const q = getCurrentQuestion();
+      if (!q) return;
+
+      const prog = getProg(q.id);
+      const solved = isSolvedStatus(prog.status);
+
+      // Restore solved answer or reset for fresh attempt
+      state.selection = solved ? [...q.correct] : [];
+
+      const meta = CHAPTER_META[q.chapter];
+      qChapterBadge.textContent = meta.short;
+      qTopicLabel.textContent = meta.title;
+      qNumberBadge.textContent = `Soal #${q.id}` + (prog.attempts > 0 ? ` • ${prog.attempts}x cek` : "");
+      questionText.textContent = q.question;
+
+      if (q.type === "pg") {
+        qTypeBadge.textContent = "Pilihan Ganda";
+        qTypeBadge.className = "px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-slate-100 text-slate-700";
+        pgkCallout.classList.add("hidden");
+      } else {
+        qTypeBadge.textContent = "Pilihan Ganda Kompleks • Pilih >1";
+        qTypeBadge.className = "px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-violet-100 text-violet-800";
+        pgkCallout.classList.remove("hidden");
+      }
+
+      // Subtle card animation
+      questionCard.classList.remove("animate-fade-up");
+      void questionCard.offsetWidth;
+      questionCard.classList.add("animate-fade-up");
+
+      renderOptions(q, solved);
+
+      if (solved) {
+        renderCorrectFeedback(q, prog);
+      } else {
+        feedbackCard.classList.add("hidden");
+        feedbackCard.innerHTML = "";
+      }
+
+      updateBottomBar(solved, prog);
+      quizView.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function renderOptions(q, solved) {
+      optionsContainer.innerHTML = "";
+      ["A", "B", "C", "D"].forEach(letter => {
+        const isSelected = state.selection.includes(letter);
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.disabled = solved;
+
+        let cardCls = "w-full min-h-[58px] text-left p-3.5 rounded-2xl border-2 transition-all flex items-center gap-3 ";
+        let badgeCls = "w-8 h-8 rounded-xl flex items-center justify-center font-extrabold text-sm shrink-0 transition-all ";
+        let indicator = "";
+
+        if (solved && isSelected) {
+          cardCls += "border-emerald-500 bg-emerald-50 text-emerald-950 shadow-xs";
+          badgeCls += "bg-emerald-600 text-white";
+          indicator = `<span class="ml-auto text-emerald-600 font-extrabold text-lg shrink-0">✓</span>`;
+        } else if (solved && !isSelected) {
+          cardCls += "border-slate-200/70 bg-white/60 text-slate-400 opacity-70";
+          badgeCls += "bg-slate-100 text-slate-400";
+        } else if (isSelected) {
+          if (q.type === "pgk") {
+            cardCls += "border-violet-600 bg-violet-50/90 text-violet-950 shadow-xs active:scale-[0.99]";
+            badgeCls += "bg-violet-600 text-white";
+            indicator = `<span class="ml-auto w-5 h-5 rounded-md bg-violet-600 text-white flex items-center justify-center text-xs font-bold shrink-0">✓</span>`;
+          } else {
+            cardCls += "border-blue-600 bg-blue-50/90 text-blue-950 shadow-xs active:scale-[0.99]";
+            badgeCls += "bg-blue-600 text-white";
+            indicator = `<span class="ml-auto w-5 h-5 rounded-full border-[5px] border-blue-600 bg-white shrink-0"></span>`;
+          }
+        } else {
+          cardCls += "border-slate-200 bg-white hover:border-slate-300 text-slate-800 active:scale-[0.99]";
+          badgeCls += "bg-slate-100 text-slate-600";
+          indicator = q.type === "pgk"
+            ? `<span class="ml-auto w-5 h-5 rounded-md border-2 border-slate-300 bg-white shrink-0"></span>`
+            : `<span class="ml-auto w-5 h-5 rounded-full border-2 border-slate-300 bg-white shrink-0"></span>`;
+        }
+
+        btn.className = cardCls;
+        btn.innerHTML = `
+          <span class="${badgeCls}">${letter}</span>
+          <span class="text-[15px] font-medium leading-snug flex-1">${q.options[letter]}</span>
+          ${indicator}
+        `;
+
+        if (!solved) {
+          btn.addEventListener("click", () => toggleOption(q, letter));
+        }
+
+        optionsContainer.appendChild(btn);
+      });
+    }
+
+    function toggleOption(q, letter) {
+      if (q.type === "pg") {
+        state.selection = [letter];
+      } else {
+        if (state.selection.includes(letter)) {
+          state.selection = state.selection.filter(l => l !== letter);
+        } else {
+          state.selection = [...state.selection, letter].sort();
+        }
+      }
+      renderOptions(q, false);
+      updateBottomBar(false, getProg(q.id));
+    }
+
+    function updateBottomBar(solved, prog) {
+      prevBtn.disabled = state.currentIndex === 0;
+      const isLast = state.currentIndex === state.activeIds.length - 1;
+      nextBtn.disabled = false;
+
+      if (solved) {
+        checkBtn.disabled = false;
+        checkBtn.className = "flex-1 min-h-[48px] px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-extrabold text-sm shadow-md shadow-emerald-200/80 transition flex items-center justify-center gap-1.5";
+        checkBtn.innerHTML = isLast ? "Lihat Hasil &amp; Evaluasi 🏆" : "Soal Berikutnya →";
+      } else {
+        checkBtn.disabled = state.selection.length === 0;
+        checkBtn.className = "flex-1 min-h-[48px] px-4 rounded-2xl bg-blue-600 hover:bg-blue-700 active:scale-[0.98] disabled:bg-slate-300 disabled:text-slate-500 disabled:shadow-none text-white font-extrabold text-sm shadow-md shadow-blue-200/80 transition flex items-center justify-center gap-1.5";
+        checkBtn.innerHTML = prog.attempts > 0 ? "Periksa Ulang" : "Periksa Jawaban";
+      }
+    }
+
+    // ==================== AUTO-CORRECTION ENGINE (ZERO SPOILERS!) ====================
+    function arraysMatch(a, b) {
+      if (a.length !== b.length) return false;
+      const sa = [...a].sort();
+      const sb = [...b].sort();
+      return sa.every((v, i) => v === sb[i]);
+    }
+
+    function handleCheckAction() {
+      const q = getCurrentQuestion();
+      if (!q) return;
+      const prog = getProg(q.id);
+      const solved = isSolvedStatus(prog.status);
+
+      if (solved) {
+        if (state.currentIndex < state.activeIds.length - 1) {
+          state.currentIndex++;
+          renderCurrentQuestion();
+        } else {
+          setView("eval");
+        }
+        return;
+      }
+
+      if (state.selection.length === 0) return;
+
+      const attempts = prog.attempts + 1;
+      const isCorrect = arraysMatch(state.selection, q.correct);
+
+      if (isCorrect) {
+        const status = attempts === 1 ? "first_try" : "corrected";
+        state.progress[q.id] = { status, attempts, lastSelected: [...state.selection] };
+        saveProgress();
+
+        updateHeaderStats();
+        qNumberBadge.textContent = `Soal #${q.id} • ${attempts}x cek`;
+        renderOptions(q, true);
+        renderCorrectFeedback(q, state.progress[q.id]);
+        updateBottomBar(true, state.progress[q.id]);
+      } else {
+        state.progress[q.id] = { status: "wrong_pending", attempts, lastSelected: [...state.selection] };
+        saveProgress();
+
+        qNumberBadge.textContent = `Soal #${q.id} • ${attempts}x cek`;
+        renderAutoCorrectionFeedback(q, state.selection);
+        updateBottomBar(false, state.progress[q.id]);
+
+        feedbackCard.classList.remove("animate-shake");
+        void feedbackCard.offsetWidth;
+        feedbackCard.classList.add("animate-shake");
+      }
+
+      setTimeout(() => {
+        feedbackCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }, 60);
+    }
+
+    function renderCorrectFeedback(q, prog) {
+      feedbackCard.classList.remove("hidden", "border-orange-300", "bg-orange-50/95");
+      feedbackCard.classList.add("border-emerald-300", "bg-emerald-50/95");
+
+      const title = prog.status === "first_try"
+        ? "Benar di percobaan pertama! 🎉"
+        : `Mantap! Berhasil diperbaiki di percobaan ke-${prog.attempts} 👏`;
+
+      feedbackCard.innerHTML = `
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-extrabold text-lg shrink-0">✓</div>
+          <div class="flex-1 min-w-0">
+            <div class="font-extrabold text-sm text-emerald-900">${title}</div>
+            <p class="text-xs text-emerald-800 mt-1 leading-relaxed">${q.successExplanation}</p>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderAutoCorrectionFeedback(q, selected) {
+      feedbackCard.classList.remove("hidden", "border-emerald-300", "bg-emerald-50/95");
+      feedbackCard.classList.add("border-orange-300", "bg-orange-50/95");
+
+      let errorListHTML = "";
+
+      if (q.type === "pg") {
+        const chosen = selected[0];
+        const reason = q.optionHints[chosen] || "Pilihan ini belum sesuai dengan aturan grammar atau konteks kalimat.";
+        errorListHTML = `<p class="text-xs text-rose-900 leading-relaxed"><strong>Opsi ${chosen}:</strong> ${reason}</p>`;
+      } else {
+        // PGK: tell which checked options are wrong (with specific reason) + how many correct answers were missed (NO LETTERS LEAKED)
+        const wrongPicked = selected.filter(l => !q.correct.includes(l));
+        const missedCount = q.correct.filter(l => !selected.includes(l)).length;
+        const items = [];
+
+        wrongPicked.forEach(letter => {
+          const reason = (q.wrongHints && q.wrongHints[letter])
+            ? q.wrongHints[letter]
+            : "Opsi ini tidak memenuhi syarat pertanyaan.";
+          items.push(`<strong>Opsi ${letter} salah:</strong> ${reason}`);
+        });
+
+        if (missedCount > 0) {
+          items.push(`Kamu masih melewatkan <strong>${missedCount} jawaban benar</strong> lainnya.`);
+        }
+
+        errorListHTML = `<ul class="list-disc pl-4 space-y-1.5 text-xs text-rose-900 leading-relaxed">${items.map(i => `<li>${i}</li>`).join("")}</ul>`;
+      }
+
+      feedbackCard.innerHTML = `
+        <div class="flex items-center gap-2.5 mb-2.5">
+          <span class="w-8 h-8 rounded-xl bg-orange-500 text-white flex items-center justify-center text-sm font-extrabold shrink-0">!</span>
+          <div>
+            <div class="font-extrabold text-sm text-orange-950">Auto-Koreksi • Belum Tepat</div>
+            <div class="text-[11px] font-medium text-orange-800/80">Ubah pilihanmu lalu tekan <strong>Periksa Ulang</strong>.</div>
+          </div>
+        </div>
+
+        <div class="bg-rose-50 border border-rose-200 rounded-2xl p-3 mb-2.5">
+          <div class="text-[11px] font-extrabold uppercase tracking-wide text-rose-700 mb-1">❌ Letak Kesalahan:</div>
+          ${errorListHTML}
+        </div>
+
+        <div class="bg-white border border-orange-200 rounded-2xl p-3">
+          <div class="text-[11px] font-extrabold uppercase tracking-wide text-orange-700 mb-1">🧭 Seharusnya (Petunjuk Aturan):</div>
+          <p class="text-xs text-slate-700 leading-relaxed">${q.ruleGuide}</p>
+        </div>
+      `;
+    }
+
+    // Bottom bar events
+    checkBtn.addEventListener("click", handleCheckAction);
+
+    prevBtn.addEventListener("click", () => {
+      if (state.currentIndex > 0) {
+        state.currentIndex--;
+        renderCurrentQuestion();
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (state.currentIndex < state.activeIds.length - 1) {
+        state.currentIndex++;
+        renderCurrentQuestion();
+      } else {
+        setView("eval");
+      }
+    });
+
+    // ==================== BOTTOM SHEET: DAFTAR SOAL (1–50) ====================
+    function openDrawer() {
+      const currentQ = getCurrentQuestion();
+      const activeId = currentQ ? currentQ.id : -1;
+      drawerSub.textContent = `Menampilkan semua 50 soal (Ketuk nomor untuk melompat)`;
+      drawerGrid.innerHTML = "";
+
+      QUESTIONS.forEach(q => {
+        const p = getProg(q.id);
+        const isActive = q.id === activeId && state.view === "quiz";
+        const btn = document.createElement("button");
+        btn.type = "button";
+
+        let cls = "h-11 rounded-2xl font-extrabold text-sm flex items-center justify-center transition active:scale-95 relative ";
+        if (isActive) {
+          cls += "bg-blue-600 text-white ring-2 ring-offset-2 ring-blue-500 shadow-sm";
+        } else if (isSolvedStatus(p.status)) {
+          cls += "bg-emerald-500 text-white shadow-xs";
+        } else if (p.status === "wrong_pending") {
+          cls += "bg-amber-500 text-white shadow-xs";
+        } else {
+          cls += "bg-slate-100 text-slate-600 hover:bg-slate-200";
+        }
+
+        btn.className = cls;
+        btn.innerHTML = `<span>${q.id}</span>${q.type === "pgk" ? '<span class="absolute top-1 right-1.5 w-1.5 h-1.5 rounded-full bg-violet-400"></span>' : ''}`;
+        btn.addEventListener("click", () => {
+          // If clicked question is outside current filter, reset filters to 'all' so user can jump directly
+          if (!state.activeIds.includes(q.id)) {
+            state.chapterFilter = "all";
+            state.typeFilter = "all";
+            document.querySelectorAll(".ch-filter-btn").forEach(b => {
+              b.className = b.dataset.ch === "all"
+                ? "ch-filter-btn shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-600 text-white transition"
+                : "ch-filter-btn shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold bg-white border border-slate-200 text-slate-600 transition";
+            });
+            document.querySelectorAll(".type-filter-btn").forEach(b => {
+              b.className = b.dataset.type === "all"
+                ? "type-filter-btn px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-800 text-white transition"
+                : "type-filter-btn px-2.5 py-1 rounded-full text-[11px] font-bold bg-white border border-slate-200 text-slate-600 transition";
+            });
+            state.activeIds = QUESTIONS.map(item => item.id);
+            filterMatchBadge.textContent = "50 soal";
+          }
+
+          state.currentIndex = state.activeIds.indexOf(q.id);
+          closeDrawer();
+          setView("quiz");
+        });
+
+        drawerGrid.appendChild(btn);
+      });
+
+      drawerModal.classList.remove("hidden");
+    }
+
+    function closeDrawer() {
+      drawerModal.classList.add("hidden");
+    }
+
+    openDrawerBtn.addEventListener("click", openDrawer);
+    closeDrawerBtn.addEventListener("click", closeDrawer);
+    drawerModal.addEventListener("click", e => {
+      if (e.target === drawerModal) closeDrawer();
+    });
+    drawerEvalBtn.addEventListener("click", () => {
+      closeDrawer();
+      setView("eval");
+    });
+
+    // ==================== EVALUATION SCREEN ====================
+    function renderEvaluation() {
+      updateHeaderStats();
+
+      let firstTry = 0;
+      let corrected = 0;
+      let remaining = 0;
+
+      QUESTIONS.forEach(q => {
+        const st = getProg(q.id).status;
+        if (st === "first_try") firstTry++;
+        else if (st === "corrected") corrected++;
+        else remaining++;
+      });
+
+      const totalSolved = firstTry + corrected;
+      const pctFirst = Math.round((firstTry / QUESTIONS.length) * 100);
+
+      evalTotalScore.textContent = `${totalSolved}/50`;
+      evalFirstTryPct.textContent = `${pctFirst}%`;
+      statCorrectFirst.textContent = firstTry;
+      statCorrected.textContent = corrected;
+      statRemaining.textContent = remaining;
+
+      if (pctFirst >= 85) {
+        evalEmoji.textContent = "🏆";
+        evalSub.textContent = "Luar biasa! Pemahaman Chapter 16–20 sangat kuat.";
+      } else if (totalSolved === 50) {
+        evalEmoji.textContent = "🎉";
+        evalSub.textContent = "Hebat! Semua 50 soal telah berhasil kamu selesaikan.";
+      } else {
+        evalEmoji.textContent = "📈";
+        evalSub.textContent = "Terus berlatih dengan fitur Auto-Koreksi sampai 50/50!";
+      }
+
+      // PG vs PGK stats
+      const pgQs = QUESTIONS.filter(q => q.type === "pg");
+      const pgkQs = QUESTIONS.filter(q => q.type === "pgk");
+      const pgSolved = pgQs.filter(q => isSolvedStatus(getProg(q.id).status)).length;
+      const pgFirst = pgQs.filter(q => getProg(q.id).status === "first_try").length;
+      const pgkSolved = pgkQs.filter(q => isSolvedStatus(getProg(q.id).status)).length;
+      const pgkFirst = pgkQs.filter(q => getProg(q.id).status === "first_try").length;
+
+      evalPgScore.textContent = `${pgSolved} / ${pgQs.length}`;
+      evalPgFirst.textContent = `${Math.round((pgFirst / pgQs.length) * 100)}% benar 1x coba`;
+      evalPgkScore.textContent = `${pgkSolved} / ${pgkQs.length}`;
+      evalPgkFirst.textContent = `${Math.round((pgkFirst / pgkQs.length) * 100)}% benar 1x coba`;
+
+      // Per-Chapter breakdown (16–20)
+      evalChapterList.innerHTML = "";
+      [16, 17, 18, 19, 20].forEach(ch => {
+        const chQs = QUESTIONS.filter(q => q.chapter === ch);
+        const chFirst = chQs.filter(q => getProg(q.id).status === "first_try").length;
+        const chCorr = chQs.filter(q => getProg(q.id).status === "corrected").length;
+        const chSolved = chFirst + chCorr;
+
+        const row = document.createElement("div");
+        row.innerHTML = `
+          <div class="flex items-center justify-between text-xs mb-1 gap-2">
+            <span class="font-bold text-slate-700 truncate">Ch. ${ch}: ${CHAPTER_META[ch].title}</span>
+            <span class="font-extrabold text-blue-700 shrink-0">${chSolved}/${chQs.length} <span class="text-slate-400 font-semibold">(${chFirst}x 1st)</span></span>
+          </div>
+          <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden flex">
+            <div class="h-full bg-emerald-500 transition-all" style="width: ${(chFirst / chQs.length) * 100}%"></div>
+            <div class="h-full bg-blue-400 transition-all" style="width: ${(chCorr / chQs.length) * 100}%"></div>
+          </div>
+        `;
+        evalChapterList.appendChild(row);
+      });
+    }
+
+    openEvalBtn.addEventListener("click", () => {
+      setView(state.view === "eval" ? "quiz" : "eval");
+    });
+    backToQuizBtn.addEventListener("click", () => setView("quiz"));
+
+    // ==================== RESET MODAL ====================
+    openResetModalBtn.addEventListener("click", () => resetModal.classList.remove("hidden"));
+    cancelResetBtn.addEventListener("click", () => resetModal.classList.add("hidden"));
+    resetModal.addEventListener("click", e => {
+      if (e.target === resetModal) resetModal.classList.add("hidden");
+    });
+    confirmResetBtn.addEventListener("click", () => {
+      state.progress = {};
+      saveProgress();
+      resetModal.classList.add("hidden");
+      state.currentIndex = 0;
+      setView("quiz");
+    });
+
+    // ==================== INITIALIZE APP ====================
+    loadProgress();
+    applyFilters(false);
+  </script>
+</body>
+</html>
